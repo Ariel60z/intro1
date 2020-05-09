@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Changa';
+    text-align: center;
+}
+
+.header {
+    background-color: #3df5a8;
+    padding: 20px;
+    color: white;
+    text-align: left;
+}
+
+.header h1 {
+    margin-left: 200px;
+}
+
+.container {
+    font-size: 32px;
+    color: #3df5a8;
+}
+
+.button {
+    margin-top: 10px;
+}

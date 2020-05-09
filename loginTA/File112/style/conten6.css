@@ -1,0 +1,68 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    padding: 40px;
+    background: url(https://webgradients.com/public/webgradients_png/079%20Summer%20Games.png);
+	background-size: cover;
+}
+.header h1{
+    font-family: 'Changa';
+    color: #fff;
+    font-size: 40px;
+    margin-left: 40px;
+}
+.container{
+    margin-left: 80px;
+    margin-top: 80px;
+}
+.row{
+    display: flex;
+    margin-bottom: 3rem;
+}
+h1{
+    font-family: 'Changa'
+}
+img{
+    width: 280px;
+    height: 300px;
+}
+.content-1-blog{
+    border: 1px solid black;
+    width: 281px;
+}
+.text-1-blog{
+    margin-left: 60px;
+}
+.text-1-blog h1{
+    font-family: 'Changa';
+    font-size: 24px;
+}
+.text-1-blog p{
+    font-family: 'Changa';
+    margin-left: 50px;
+    transform: translateY(-50%);
+}
+.contact{
+    margin-left: 40px;
+    font-family: 'Changa';
+    font-size: 24px;
+}
+.footer{
+    padding: 40px;
+    background: url(https://webgradients.com/public/webgradients_png/079%20Summer%20Games.png);
+    background-size: cover;
+    margin-top: 20px;   
+    text-align: center;
+    font-family: 'Changa';
+}
+.footer h1 {
+    color: #fff;
+}
+
+@media screen and (max-width: 720px){
+    .container{
+        margin-left: 40px;
+    }
+}

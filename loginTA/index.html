@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/segment7" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/futura-renner" type="text/css"/>
+    <title>Digital Clock</title>
+</head>
+<style type="text/css">
+    *{
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    body{
+        background: #e6e6d4;
+    }
+    #myclock{
+        margin: 100px auto;
+        height: 164px;
+        width: 320px;
+        background: #262626;
+        box-shadow: 0 0 10px 5px #555;
+        border: 6px solid #1687a7;
+        border-radius: 0 30px 0 30px;
+        color: rgb(0,224,224);
+    }
+    #time{
+        width: 100%;
+        height: 90px;
+        font-family: 'Segment7Standard';
+    }
+    #hrs-min{
+        width: 80%;
+        font-size: 70px;
+        float: left;
+        height: auto;
+        padding: 20px 0 0 30px;
+    }
+    #sec{
+        width: 20%;
+        font-size: 25px;
+        float: left;
+        height: auto;
+        padding-top:30px;   
+    }
+    #date{
+        padding: 10px 20px;
+        font-family: 'FuturarennerRegular';
+        font-size: 18px;
+        height: 60px;
+        width: 100%;
+    }
+    #dmy{
+        float: left;
+        width: 60%;
+        padding: 5px 10px;
+        margin: 0;        
+    }
+    #day{
+        width: 40%;
+        float: right;
+    }
+    #dayp{
+        border: 1px solid rgb(0,224,224);
+        padding: 0 4px;
+        text-align: center;
+        margin: 0;
+    }
+</style>
+<body>
+  <div id="myclock">
+      <div id="time">
+          <div id="hrs-min"></div>
+          <div id="sec"></div>
+      </div>
+      <div id="date">
+          <div id="dmy"></div>
+          <div id="day"><p id="dayp"></p> </div>
+      </div>
+  </div>
+  <script type="text/javascript">
+     window.onload = function(){
+        loadclock();
+     }
+     function loadclock(){
+        var 
+        hrsmin = document.getElementById('hrs-min'),
+        sec = document.getElementById('sec'),
+        dmy = document.getElementById('dmy'),
+        weekday = document.getElementById('dayp'),
+
+     time = new Date(),
+     hours = time.getHours(),
+     minutes = time.getMinutes(),
+     seconds = time.getSeconds(),
+     date = time.getDate(),
+     month = time.getMonth(),
+     year = time.getFullYear(),
+     day = time.getDay();
+
+     function lesst10(){
+        function islesst10(){
+            if( hours < 10){
+                hours = '0'+ hours;
+            }
+            if( minutes < 10){
+                minutes = '0'+ minutes;
+            }
+            if( seconds < 10){
+                seconds = '0'+ seconds;
+            }
+        }
+            islesst10();
+            hrsmin.innerHTML= hours +' '+minutes;
+            sec.innerHTML= seconds;
+     }
+     function month11(){
+        var montha=[
+        'january',
+        'febuary',
+        'march',
+        'april',
+        'may',
+        'june',
+        'july',
+        'august',
+        'september',
+        'october',
+        'november',
+        'december'
+        ];
+        var cmonth = montha[month];
+        dmy.innerHTML= cmonth +' '+date+' '+year ;
+     }
+     function day11(){
+        var daya=[
+        'moday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday'
+        ];
+        var cday = daya[day];
+        weekday.innerHTML= cday ;
+     }
+     day11();
+     month11();
+     lesst10();
+     setInterval(loadclock,1000);
+     }
+  </script>
+</body>
+</html>

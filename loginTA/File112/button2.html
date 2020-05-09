@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Konsultasi dengan Ahlinya</title>
+    <link rel="stylesheet" href="style/conten2.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Changa&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="assets/5.png" type="image/x-icon" />
+    <link rel="icon" href="assets/5.png" type="image/x-icon" />
+    <script src="js/conten2.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Health-Y</h1>
+    </div>
+
+    <div class="top">
+      <h1>Konsultasi dengan Proffessional</h1>
+      <p>Click the photo to see a more profile</p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="doctor-page-1" onclick="myModal(1)">
+          <img src="assets/1.png" alt="img" id="myImg1" />
+          <div class="text" id="experts1">
+            <h1>John Sebastian</h1>
+            <p>Proffesional Doctor</p>
+          </div>
+        </div>
+
+        <div class="doctor-page-2" onclick="myModal(2)">
+          <img src="assets/2.png" alt="img" id="myImg2" />
+          <div class="text" id="experts2">
+            <h1>Christian Feddel</h1>
+            <p>Apoteker</p>
+          </div>
+        </div>
+
+        <div class="doctor-page-3" onclick="myModal(3)">
+          <img src="assets/3.png" alt="img" id="myImg3" />
+          <div class="text" id="experts3">
+            <h1>Matthew Lim</h1>
+            <p>CEO Of Rumah Sakit Cendrawasih</p>
+          </div>
+        </div>
+
+        <div class="doctor-page-4" onclick="myModal(4)">
+          <img src="assets/4.png" alt="img" id="myImg4" />
+          <div class="text" id="experts4">
+            <h1>Bryan Hommel</h1>
+            <p>Proffesional About Medicine</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img" />
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
+
+    <div class="footer">
+      <h1>copryright by: L0rem Ipsum , Zivil , Eunwoo &copy;</h1>
+    </div>
+  </body>
+</html>

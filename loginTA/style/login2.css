@@ -1,0 +1,115 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Changa';
+}
+
+.header {
+	text-align: center;
+	background-color: #3df5a8;
+	padding: 16px;
+	color: white;
+	font-size: 21px;
+}
+
+.logo {
+	position: absolute;
+	left: 41%;
+}
+
+.logo img {
+	width: 240px;
+	height: 240px;
+}
+
+.box {
+	position: absolute;
+	width: 210px;
+	height: 100px;
+	bottom: 25%;
+	left: 43%;
+}
+
+.box input {
+	text-align: center;
+	width: 200px;
+}
+
+.row {
+	align-content: center;
+	position: absolute;
+	bottom: 23%;
+	left: 44%;
+}
+
+.row button {
+	margin-right: 40px;
+	padding: 5px;
+}
+.row input {
+	margin-right: 40px;
+	padding: 5px;
+}
+
+.forget {
+	position: absolute;
+	bottom: 16%;
+	left: 46%;
+}
+
+@media screen and (max-width: 720px) {
+	body {
+		padding: 0;
+		margin: 0;
+		font-family: 'Changa';
+	}
+
+	.header {
+		text-align: center;
+		background-color: #3df5a8;
+		padding: 16px;
+		color: white;
+		font-size: 21px;
+	}
+
+	.logo {
+		position: absolute;
+		left: 41%;
+	}
+
+	.logo img {
+		width: 240px;
+		height: 240px;
+	}
+
+	.box {
+		position: absolute;
+		width: 210px;
+		height: 100px;
+		bottom: 25%;
+		left: 43%;
+	}
+
+	.box input {
+		text-align: center;
+		width: 200px;
+	}
+
+	.row {
+		position: absolute;
+		bottom: 23%;
+		left: 44%;
+	}
+
+	.row button {
+		margin-right: 50px;
+		padding: 5px;
+	}
+
+	.forget {
+		position: absolute;
+		bottom: 16%;
+		left: 46%;
+	}
+
+}

@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Changa';
+}
+
+.header {
+	text-align: center;
+	padding: 12px;
+	background-color: #3df5a8;
+	color: white;
+	font-size: 21px;
+}
+
+.container {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.nama,
+.email,
+.password,
+.konfirmasi,
+.nohp,
+.button {
+	margin-top: 20px;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/segment7" type="text/css"/>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/futura-renner" type="text/css"/>
+<style>
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-shadow: border-box;
+}
+body{
+	background: #262626;
+}
+#myClock{
+	width: 320px;
+	height: 164px;
+	margin: 100px auto;
+	background: #1A1A1A;
+	border: 4px solid #1687a7;
+	border-radius: 0 30px 0 30px;
+	box-shadow: 0 0 10px 5px #555;
+	color: rgb(4,226,226);
+}
+#time{
+	width: 100%;
+	height: 90px;
+	font-family: 'Segment7Standard';
+}
+#time #hrs-mins{
+	float: left;
+	width: 80%;
+	height: auto;
+	font-size: 70px;
+	padding: 20px 0 0 30px;
+}
+#time #secs{
+	float: left;
+	width: 20%;
+	height: auto;
+	font-size: 25px;
+	padding-top: 30px;
+}
+#date{
+	width: 100%;
+	height: 60px;
+	padding: 10px 20px;
+	font-size: 18px;
+	font-family: 'FuturaRennerRegular';
+}
+#date #d-m-y{
+	float: left;
+	width: 60%;
+	padding: 5px 10px;
+}
+#date #day{
+	float: right;
+	width: 40%;
+}
+#date #day p{
+	margin: 0;
+	border: 1px solid rgb(0,255,255);
+	padding: 4px 0;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div id="myClock">
+		<div id="time">
+			<div id="hrs-mins"></div>
+			<div id="secs"></div>
+		</div>
+		<div id="date">
+			<div id="d-m-y"></div>
+			<div id="day"><p id="day-paragraph"></p></div>
+		</div>
+	</div>
+<script>
+	window.onload = function(){
+		loadClock();
+	}
+
+	function loadClock(){
+		var hrAndMin = document.getElementById("hrs-mins"),
+		sec = document.getElementById("secs"),
+		monthDateYear = document.getElementById("d-m-y"),
+		weekDay = document.getElementById("day-paragraph"),
+		time = new Date(),
+		hours = time.getHours(),
+		minutes = time.getMinutes(),
+		seconds = time.getSeconds(),
+		month = time.getMonth(),
+		day = time.getDay(),
+		date = time.getDate(),
+		year = time.getFullYear();
+
+		function lessThanTen() {
+			function isLessThanTen(){
+				if(hours < 10){
+					hours = "0" + hours;
+				}
+				if(minutes < 10){
+					minutes = "0" + minutes;
+				}
+				if(seconds < 10){
+					seconds = "0" + seconds;
+				}
+			}
+			isLessThanTen();
+
+			hrAndMin.innerHTML = hours + ":" + minutes;
+			sec.innerHTML = seconds;
+			
+		}
+		function whichMonth(){
+			var monthsOfTheYear = [
+			"January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"];
+           	var currentMonth = monthsOfTheYear[month];
+           	monthDateYear.innerHTML = currentMonth + " " + date + " " + year;
+		}
+		function whichDay(){
+			dayOfTheWeek = [
+			"Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"];
+            var currentDay = dayOfTheWeek[day];
+            weekDay.innerHTML = currentDay;
+		}
+		lessThanTen();
+		whichMonth();
+		whichDay();
+	}
+	setInterval(loadClock, 1000);
+</script>
+</body>
+</html>

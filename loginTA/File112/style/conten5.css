@@ -1,0 +1,88 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Changa';
+}
+
+.header {
+    padding: 40px;
+    background: url(https://webgradients.com/public/webgradients_png/079%20Summer%20Games.png);
+    background-size: cover;
+}
+
+.header h1 {
+    font-family: 'Changa';
+    color: #fff;
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Changa';
+    font-size: 32px;
+    margin-top: 40px;
+}
+
+.container {
+    width: 1200px;
+    height: 300px;
+    margin-left: 40px;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+}
+
+.container:hover {
+    box-shadow: 0 0 4px 10px #3df5a8;
+}
+
+.row {
+    display: flex;
+}
+
+.blog-photo {
+    margin-right: 20px;
+}
+
+.blog-photo img {
+    width: 400px;
+    height: 300px;
+}
+
+.blog-content span {
+    font-size: 22px;
+}
+
+.blog-content a {
+    text-decoration: none;
+    color: #1687a7;
+    font-size: 32px;
+}
+
+.blog-content a:hover {
+    color: #3df5a8;
+}
+
+.paragraph {
+    width: 700px;
+    font-size: 20px;
+}
+
+.footer {
+    padding: 40px;
+    background: url(https://webgradients.com/public/webgradients_png/079%20Summer%20Games.png);
+    background-size: cover;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Changa';
+}
+
+.footer h1 {
+    color: #fff;
+}
+
+@media screen and (max-width: 720px) {
+    .container {
+        margin-left: 40px;
+    }
+}
